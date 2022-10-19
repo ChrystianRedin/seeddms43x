@@ -713,3 +713,30 @@ INSERT INTO tblUsers VALUES (2, 'guest', NULL, 'Guest User', NULL, '', '', '', 2
 INSERT INTO tblFolders VALUES (1, 'DMS', 0, '', 'DMS root', UNIX_TIMESTAMP(), 1, 0, 2, 0);
 INSERT INTO tblVersion VALUES (NOW(), 4, 3, 0);
 INSERT INTO tblCategory VALUES (0, '');
+
+
+INSERT INTO `tblAttributeDefinitions` (`id`, `name`, `objtype`, `type`, `multiple`, `minvalues`, `maxvalues`, `valueset`, `regex`) VALUES
+(1, '1. Número de contrato / convenio', 2, 1, 0, 0, 0, '', ''),
+(2, '2. Tipo de contrato / convenio', 2, 3, 0, 0, 0, '', ''),
+(3, '3. Nombre Persona Fisica o Juridica / Institución', 2, 3, 0, 0, 0, '', ''),
+(4, '4. Monto / Inversión', 2, 3, 0, 1, 1, '', ''),
+(5, '5. Acciones a Realizar', 2, 3, 0, 0, 0, '', ''),
+(6, '6. Proyecto o Partida / Programa', 2, 3, 0, 0, 0, '', ''),
+(7, '1. Fecha y hora de sesión', 2, 3, 0, 1, 1, '', ''),
+(8, '2. Orden del día', 2, 3, 0, 0, 0, '', ''),
+(9, '3. Tipo de sesión', 2, 3, 0, 0, 0, NULL, NULL),
+(10, '4. Naturaleza de la sesión', 2, 3, 0, 0, 0, NULL, NULL),
+(11, '5. Documentos públicos para consulta previa', 2, 3, 0, 0, 0, NULL, NULL),
+(12, '6. Acta de sesión', 2, 3, 0, 0, 0, NULL, NULL),
+(13, '7. Documentos aprobados', 2, 3, 0, 0, 0, NULL, NULL),
+(17, 'No. de expediente interno', 2, 3, 0, 0, 0, '', ''),
+(18, '7. Vigencia', 2, 3, 0, 0, 0, NULL, NULL),
+(20, '1. Nombre del estado financiero', 2, 3, 0, 0, 0, '', ''),
+(21, '2. Fecha del estado', 2, 3, 0, 0, 0, '', '');
+
+ALTER TABLE `tblAttributeDefinitions`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+ALTER TABLE `tblAttributeDefinitions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;

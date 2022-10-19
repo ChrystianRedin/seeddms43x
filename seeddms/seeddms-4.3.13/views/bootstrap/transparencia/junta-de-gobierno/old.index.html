@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Junta de Gobierno del Instituto de Información Estadística y Geográfica de Jalisco</title>
+    <link rel="icon" href="../src/images/cropped-iieg-logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <!--<link rel="stylesheet" href="../assets/css/tableexport.min.css" />-->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style type="text/css">
+        .table > tbody > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<!-- BARRA DE LOGOS Y TITULO -->
+<div class="barra-superior">
+    <div class="container">
+        <div class="row vertical-align">
+            <div class="col-3">
+                <a href="https://www.jalisco.gob.mx/">
+                    <img src="../src/images/logo-jalisco-black.svg" id="logo-jalisco">
+                </a>
+            </div>
+            <div class="col-6 text-center">
+                <span class="align-middle">
+                    <h3><span class="text-danger">Junta de Gobierno</span> del Instituto de Información Estadística y Geográfica de Jalisco</h3>
+                </span>
+            </div>
+            <div class="col-3 text-right">
+                <a href="http://iieg.gob.mx/">
+                    <img src="../src/images/logo-iieg.png" id="logo-iieg">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BARRA DE BUSCADOR -->
+<div class="barra-buscador">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-sm-12 col-md-12">
+                <div class="row vertical-align">
+                    <div class="col-sm-12 col-lg-6 col-xl-6">
+                        <!--<form class="form-inline">-->
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                </div>
+                                <input id="searchbar" type="text" class="form-control" placeholder="Buscar documentos..." aria-label="Buscar documento" aria-describedby="basic-addon1" width="100%">
+                            </div>
+                        <!--</form>-->
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="selectTipoSesion"><i class="fa fa-filter"></i>&nbsp; Tipo sesión:</label>
+                            </div>
+                            <select class="custom-select" id="selectTipoSesion">
+                                <option selected value="todas">Todas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 col-xl-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="selectAnio"><i class="fa fa-filter"></i>&nbsp; Año:</label>
+                            </div>
+                            <select class="custom-select" id="selectAnio">
+                                <option selected value="todos">Todos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- TABLA DE DOCUMENTOS -->
+<div class="tabla-documentos">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 col-sm-6">
+            <div class="input-group input-group-sm docs-pagina mb-3">
+                <div class="input-group-prepend ">
+                    <label class="input-group-text" for="selectDocsPagina"><i class="fa fa-file"></i>&nbsp; Docs/página:</label>
+                </div>
+                <select class="custom-select form-control" id="selectDocsPagina" name="selectDocsPagina">
+                    <option value="0" selected>Todos</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-sm-6">
+            <button type="button" class="btn btn-info btn-sm" id="btnExport"><i class="fa fa-file-excel-o" aria-hidden="true"></i> &nbsp;Exportar lista</button>
+        </div>
+        <div class="col-xl-6 col-md-12 col-sm-12">
+            <div class="paginacion"></div>
+        </div>
+    </div> <br>
+
+    <table class="table table-striped table-responsive-sm table-convenios">
+        <thead id="table-header">
+        <tr>
+            <th scope="col" class="text-center">
+                <!--<span class="sort" id="sort-orden"><i class="fa fa-chevron-circle-down"></i> Orden del día</span>-->
+                Orden del día
+            </th>
+            <th scope="col" valign="middle">
+                <span class="sort" id="sort-fecha"><i class="fa fa-chevron-circle-down"></i> Fecha y hora de sesión</span>
+            </th>
+            <th scope="col" valign="middle">
+                <span class="sort" id="sort-tipo"><i class="fa fa-chevron-circle-down"></i> Tipo de sesión</span>
+            </th>
+            <th scope="col">
+                <span class="sort" id="sort-naturaleza"><i class="fa fa-chevron-circle-down"></i> Naturaleza de la sesión</span>
+            </th>
+            <th scope="col">
+                <!--<span class="sort" id="sort-consulta"><i class="fa fa-chevron-circle-down"></i> Documentos públicos para consulta previa</span>-->
+                Documentos públicos para consulta previa
+            </th>
+            <th scope="col">
+                <!--<span class="sort" id="sort-acciones"><i class="fa fa-chevron-circle-down"></i> Acta de sesión</span>-->
+                Acta de sesión
+            </th>
+            <th scope="col">
+                <!--<span class="sort" id="sort-programa"><i class="fa fa-chevron-circle-down"></i> Documentos aprobados</span>-->
+                Documentos aprobados
+            </th>
+        </tr>
+        </thead>
+        <tbody class="cuerpo-tabla">
+        </tbody>
+    </table>
+
+    <div width="100%" class="text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+
+    <div width="100%" class="text-center">
+        <strong class="text-resultados">No se encontraron resultados.</strong>
+    </div>
+
+    <div class="paginacion"></div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Detalles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../assets/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<!--<script src="../assets/js/xlsx.core.min.js"></script>
+<script src="../assets/js/Blob.js"></script>
+<script src="../assets/js/tableexport.js"></script>-->
+<script src="../assets/js/junta-de-gobierno.js"></script>
+</html>

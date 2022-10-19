@@ -28,7 +28,9 @@ include("../inc/inc.ClassUI.php");
 /**
  * Include class to preview documents
  */
-require_once("SeedDMS/Preview.php");
+ //se cambia la dirección
+require_once("../../pear/SeedDMS/Preview.php");
+//require_once("SeedDMS/Preview.php");
 
 $tmp = explode('.', basename($_SERVER['SCRIPT_FILENAME']));
 $view = UI::factory($theme, $tmp[1], array('dms'=>$dms, 'user'=>$user));

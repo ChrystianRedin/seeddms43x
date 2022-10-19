@@ -15,7 +15,7 @@
 //    You should have received a copy of the GNU General Public License
 //    along with this program; if not, write to the Free Software
 //    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
+date_default_timezone_set("America/Mexico_City");
 include("../inc/inc.Settings.php");
 include("../inc/inc.Calendar.php");
 include("../inc/inc.DBInit.php");

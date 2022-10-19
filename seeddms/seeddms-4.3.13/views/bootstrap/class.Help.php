@@ -35,10 +35,10 @@ class SeedDMS_View_Help extends SeedDMS_Bootstrap_Style {
 		$dms = $this->params['dms'];
 		$user = $this->params['user'];
 
-		$this->htmlStartPage(getMLText("help"));
+		$this->htmlStartPage(getMLText("graphics"));
 		$this->globalNavigation();
 		$this->contentStart();
-		$this->pageNavigation(getMLText("help"), "");
+		$this->pageNavigation(getMLText("graphics"), "");
 
 		$this->contentContainerStart();
 

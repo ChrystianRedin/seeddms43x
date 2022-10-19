@@ -100,19 +100,59 @@ function checkForm()
 ?>
 	</td>
 </tr>
-<tr>
+
+<script src="http://code.jquery.com/jquery-1.0.4.js"></script>
+<script>
+      var mostrarValor = function(x){
+            document.getElementById('valor').value=x;
+            }
+</script>
+
 	<td><?php printMLText("name");?>:</td>
-	<td><input type="text" name="name" size="60"></td>
+	<!--<td>  <input type="select" id="texto1" value="" name="name"/><br></td>-->
+	<td><select name="name" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML);">     
+				<option value=""></option>
+				<optgroup label="Junta de gobierno">
+					<option value="Documentos públicos para consulta previa">Documentos públicos para consulta previa</option>
+					<option value="Acta de sesión">Acta de sesión</option>
+					<option value="Documentos aprobados ">Documentos aprobados </option>            
+				</optgroup>
+				<optgroup label="Comité de transparencia">
+					<!--<option value="Acta">Acta de sesión</option>
+					<option value="Documentos aprobados por el órgano colegiado">Documentos aprobados por el órgano colegiado</option>
+					<option value="Documento de Revisión o Validación del ITEI">Documento de Revisión o Validación del ITEI</option>-->
+					<option value="Documentos públicos para consulta">Documentos públicos para consulta</option>
+					
+				</optgroup>
+            </select>  </td>
 </tr>
 <tr>
 	<td><?php printMLText("comment");?>:</td>
-	<td><textarea name="comment" rows="4" cols="80"></textarea></td>
+	<td><input type="text" id="valor" value="" name="comment" readonly/></td>
+	
 </tr>
+
+<!-- 
+<tr>
+	<td><?php //printMLText("name");?>:</td>
+	<td><input type="text" name="name" size="60"></td>
+</tr>
+<tr>
+	<td><?php //printMLText("comment");?>:</td>
+	<td><input type ="text" name="comment" rows="1" cols="80"></textarea></td>	
+</tr>
+-->
+
+
 <tr>
 	<td></td>
 	<td><input class="btn" type="submit" value="<?php printMLText("add");?>"></td>
+	
 </tr>
+
 </table>
+<br>
+	<td><?php //printMLText("NoteJG");?></td>
 </form>
 <?php
 		$this->contentContainerEnd();

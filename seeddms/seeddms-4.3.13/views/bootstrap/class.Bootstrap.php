@@ -289,13 +289,15 @@ $(document).ready(function () {
 			echo $this->menuClipboard($this->params['session']->getClipboard());
 			echo "   </div>";
 
-
+ 
 			echo "   <ul class=\"nav\">\n";
 	//		echo "    <li id=\"first\"><a href=\"../out/out.ViewFolder.php?folderid=".$this->params['rootfolderid']."\">".getMLText("content")."</a></li>\n";
 	//		echo "    <li><a href=\"../out/out.SearchForm.php?folderid=".$this->params['rootfolderid']."\">".getMLText("search")."</a></li>\n";
 			if ($this->params['enablecalendar']) echo "    <li><a href=\"../out/out.Calendar.php?mode=".$this->params['calendardefaultview']."\">".getMLText("calendar")."</a></li>\n";
 			if ($this->params['user']->isAdmin()) echo "    <li><a href=\"../out/out.AdminTools.php\">".getMLText("admin_tools")."</a></li>\n";
-			echo "    <li><a href=\"../out/out.Help.php\">".getMLText("help")."</a></li>\n";
+			echo "    <li><a href=\"../out/out.Help.php\">".getMLText("graphics")."</a></li>\n";
+			echo "    <li><a onclick=\"window.open('../views/bootstrap/ManualdeusoSistemadeTransparencia.pdf')\">Manual</a></li>\n";
+			
 			echo "   </ul>\n";
 			echo "     <form action=\"../op/op.Search.php\" class=\"form-inline navbar-search pull-left\" autocomplete=\"off\">";
 			if ($folder!=null && is_object($folder) && !strcasecmp(get_class($folder), "SeedDMS_Core_Folder")) {
@@ -306,11 +308,13 @@ $(document).ready(function () {
 			echo "      <input type=\"hidden\" name=\"searchin[]\" value=\"2\" />";
 			echo "      <input type=\"hidden\" name=\"searchin[]\" value=\"3\" />";
 			echo "      <input type=\"hidden\" name=\"searchin[]\" value=\"4\" />";
-			echo "      <input name=\"query\" class=\"search-query\" id=\"searchfield\" data-provide=\"typeahead\" type=\"text\" style=\"width: 150px;\" placeholder=\"".getMLText("search")."\"/>";
+			//EGCF se oculta el campop de buscar y se reemplaza con el botón que lleva directo al motor de busqueda
+			//echo "      <input name=\"query\" class=\"search-query\" id=\"searchfield\" data-provide=\"typeahead\" type=\"text\" style=\"width: 150px;\" placeholder=\"".getMLText("search")."\"/>";
 			if($this->params['enablefullsearch']) {
 				echo "      <label class=\"checkbox\" style=\"color: #999999;\"><input type=\"checkbox\" name=\"fullsearch\" value=\"1\" title=\"".getMLText('fullsearch_hint')."\"/> ".getMLText('fullsearch')."</label>";
 			}
-	//		echo "      <input type=\"submit\" value=\"".getMLText("search")."\" id=\"searchButton\" class=\"btn\"/>";
+			//EGCF este es el botón que lleva al motor de búsqueda
+			echo "      <input type=\"submit\" value=\"".getMLText("search")."\" id=\"searchButton\" class=\"glyphicon glyphicon-search\"/>";
 			echo "</form>\n";
 			echo "    </div>\n";
 		}
@@ -402,6 +406,8 @@ $(document).ready(function () {
 			echo "<li id=\"first\"><a href=\"../out/out.AddSubFolder.php?folderid=". $folderID ."&showtree=".showtree()."\">".getMLText("add_subfolder")."</a></li>\n";
 			echo "<li><a href=\"../out/out.AddDocument.php?folderid=". $folderID ."&showtree=".showtree()."\">".getMLText("add_document")."</a></li>\n";
 			if($this->params['enablelargefileupload'])
+				//EGCF 10/10/17 se oculta 
+				//NOTA: es importante que para editar acceso y editar carpeta se activen estas líneas en modo ADMIN lineas: 399, 402, 407, 408, 410, 413, 414, 417 y 419
 				echo "<li><a href=\"../out/out.AddMultiDocument.php?folderid=". $folderID ."&showtree=".showtree()."\">".getMLText("add_multiple_documents")."</a></li>\n";
 			echo "<li><a href=\"../out/out.EditFolder.php?folderid=". $folderID ."&showtree=".showtree()."\">".getMLText("edit_folder_props")."</a></li>\n";
 			if ($folderID != $this->params['rootfolderid'] && $folder->getParent())
@@ -447,9 +453,9 @@ $(document).ready(function () {
 					echo "<li><a href=\"../out/out.MoveDocument". $docid ."\">".getMLText("move_document")."</a></li>";
 				}
 			}
-			if($this->params['accessobject']->maySetExpires()) {
-				echo "<li><a href=\"../out/out.SetExpires". $docid ."\">".getMLText("expires")."</a></li>";
-			}
+			//if($this->params['accessobject']->maySetExpires()) {
+				//echo "<li><a href=\"../out/out.SetExpires". $docid ."\">".getMLText("expires")."</a></li>";
+			//}
 		}
 		if ($accessMode == M_ALL) {
 			echo "<li><a href=\"../out/out.RemoveDocument". $docid ."\">".getMLText("rm_document")."</a></li>";
@@ -794,7 +800,7 @@ $(document).ready(function () {
 			<div class="input-append">
 				<input type="text" class="form-control" readonly>
 				<span class="btn btn-default btn-file">
-					<?php printMLText("browse");?>&hellip; <input id="<?php echo $varname; ?>" type="file" name="<?php echo $varname; ?>"<?php if($multiple) echo " multiple"; ?><?php if($accept) echo " accept=\"".$accept."\""; ?>>
+					<?php printMLText("browse");?>&hellip; <input id="<?php echo $varname; ?>" type="file" name="<?php echo $varname; ?>"<?php if($multiple) echo " multiple"; ?><?php if($accept) echo " accept=\"".$accept."\""; ?> ><?php //para agregar que se puedan consultar multiples archivos solo agregar la palabra multiple al final del php?>
 				</span>
 			</div>
 		</div>
@@ -1025,7 +1031,7 @@ function folderSelected<?php echo $formName ?>(id, name) {
 			}
 			echo "</select>";
 		} else {
-			echo "<input type=\"text\" name=\"".$fieldname."[".$attrdef->getId()."]\" value=\"".htmlspecialchars($objvalue)."\" />";
+			echo "<input type=\"text\" name=\"".$fieldname."[".$attrdef->getId()."]\" value=\"".htmlspecialchars($objvalue)."\" / >" ;
 		}
 	} /* }}} */
 
