@@ -1,0 +1,4 @@
+seeddms/dump
+docker-compose2.yml
+Dockerfile2
+seeddms/data/*.log
