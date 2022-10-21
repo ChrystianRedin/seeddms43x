@@ -19,7 +19,7 @@
 //    along with this program; if not, write to the Free Software
 //    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-
+date_default_timezone_set("America/Mexico_City");
 class SeedDMS_Bootstrap_Style extends SeedDMS_View_Common {
 	var $imgpath;
 	var $extraheader;

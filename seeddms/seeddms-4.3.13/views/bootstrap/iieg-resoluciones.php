@@ -17,7 +17,7 @@ $(function () {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.2.1/jquery.quicksearch.js"></script>
 
-<p align="center"><img src="https://iieg.gob.mx/transparencia/img//logo_iieg.png"></p>
+<p align="center"><img src="http://localhost:8002/seeddms/transparencia/img/logo_iieg.png"></p>
 
 <p align="center"> <FONT FACE="arial" SIZE=5 COLOR=Gray><b><u>Resoluciones</u><br><br>Instituto de Informaci&oacute;n Estad&iacute;stica y Geogr&aacute;fica de Jalisco</FONT> </p>
 
@@ -175,9 +175,9 @@ $.extend($.expr[":"],
 
   <?php
 	//Consultamos la tabla de ipimun05
-	$link = @mysql_connect("localhost", "iieggob_transpa","ufLRX2KTXLsK9MH8")
+	$link = @mysql_connect("localhost", "root","testIIEG2022")
       or die ("Error al conectar a la base de datos.");
-	@mysql_select_db("iieggob_transparencia2", $link)
+	@mysql_select_db("seedms_db", $link)
       or die ("Error al conectar a la base de datos.");
 	  //EGCF 24/10/17 Quitar elementos raros 
 	  mysql_query("SET NAMES 'utf8'");

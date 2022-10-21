@@ -1,4 +1,3 @@
-# SERVER IIEG DATABASE: 5.6.37.  PHP VERSION: 5.4.16
 FROM php:5.4-apache 
 RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install pdo pdo_mysql
@@ -17,7 +16,5 @@ RUN pear install zend/zend
 RUN a2enmod rewrite && service apache2 restart
 RUN apt-get update
 RUN curl -sS https://getcomposer.org/installer | php
-#RUN mv composer.phar /usr/local/bin/composer
-#RUN chmod +x /usr/local/bin/composer
 RUN chmod 777 -R ./
 

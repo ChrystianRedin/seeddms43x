@@ -35,8 +35,8 @@
    
    <?php
 		//1. Consulta la BD
-		$link = @mysql_connect("localhost", "iieggob_transpa","ufLRX2KTXLsK9MH8") or die ("Error al conectar a la base de datos.");
-		@mysql_select_db("iieggob_transparencia2", $link) or die ("Error al conectar a la base de datos.");
+		$link = @mysql_connect("localhost", "root","testIIEG2022") or die ("Error al conectar a la base de datos.");
+		@mysql_select_db("seedms_db", $link) or die ("Error al conectar a la base de datos.");
 		//EGCF 24/10/17 Quitar elementos raros 
 		mysql_query("SET NAMES 'utf8'");
 		/*2. query para: 

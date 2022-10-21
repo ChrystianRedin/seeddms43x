@@ -130,9 +130,9 @@ $.extend($.expr[":"],
 
 					<?php //echo"<select name=nombre_dado id=nombre_dado  id='kwd_search'  for='kwd_search'>";  ?>
 					<?php					 
-					 $link = @mysql_connect("localhost", "iieggob_transpa","ufLRX2KTXLsK9MH8")
+					 $link = @mysql_connect("localhost", "root","testIIEG2022")
 					  or die ("Error al conectar a la base de datos.");
-					@mysql_select_db("iieggob_transparencia2", $link)
+					@mysql_select_db("seedms_db", $link)
 					  or die ("Error al conectar a la base de datos.");
 					  //EGCF 24/10/17 Quitar elementos raros
 					  mysql_query("SET NAMES 'utf8'");
@@ -234,9 +234,9 @@ $.extend($.expr[":"],
 
   <?php
 	//Consultamos la tabla de ipimun05
-	$link = @mysql_connect("localhost", "iieggob_transpa","ufLRX2KTXLsK9MH8")
+	$link = @mysql_connect("localhost", "root","testIIEG2022")
       or die ("Error al conectar a la base de datos.");
-	@mysql_select_db("iieggob_transparencia2", $link)
+	@mysql_select_db("seedms_db", $link)
       or die ("Error al conectar a la base de datos.");
 	  //EGCF 24/10/17 Quitar elementos raros 
 	  mysql_query("SET NAMES 'utf8'");

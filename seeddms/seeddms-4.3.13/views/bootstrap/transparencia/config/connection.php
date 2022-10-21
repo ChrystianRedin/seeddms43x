@@ -1,14 +1,14 @@
 <?php
 class Connection extends PDO {
     // Conexión local
-    //private $dsn = 'mysql:dbname=iieggob_transparencia2;host=localhost';
+    //private $dsn = 'mysql:dbname=seedms_db;host=localhost';
     //private $usuario = 'root';
     //private $pass = '';
 
     // Conexión servidor
-    private $dsn = 'mysql:dbname=iieggob_transparencia2;host=localhost';
-    private $usuario = 'iieggob_transpa';
-    private $pass = 'ufLRX2KTXLsK9MH8';
+    private $dsn = 'mysql:dbname=seedms_db;host=db';
+    private $usuario = 'root';
+    private $pass = 'testIIEG2022';
 
     /*
      * Realiza la conexión cuando se crea el objeto

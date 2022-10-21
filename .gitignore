@@ -1,4 +1,11 @@
+# macOs
+.DS_Store
+
+# MySQL volume data
 seeddms/dump
-docker-compose2.yml
-Dockerfile2
+
+# data files
 seeddms/data/*.log
+seeddms/data/1048576
+seeddms/data/cache/*/
+seeddms/data/lucene/*.cfs

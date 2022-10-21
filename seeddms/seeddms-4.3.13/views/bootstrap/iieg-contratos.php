@@ -176,10 +176,11 @@ $.extend($.expr[":"],
 	</script>
 
   <?php
+  	date_default_timezone_set("America/Mexico_City");
 	//Consultamos la tabla de ipimun05
-	$link = @mysql_connect("localhost", "iieggob_transpa","ufLRX2KTXLsK9MH8")
+	$link = @mysql_connect("localhost", "root","testIIEG2022")
       or die ("Error al conectar a la base de datos.");
-	@mysql_select_db("iieggob_transparencia2", $link)
+	@mysql_select_db("seedms_db", $link)
       or die ("Error al conectar a la base de datos.");
 	  //EGCF 24/10/17 Quitar elementos raros
 	  mysql_query("SET NAMES 'utf8'"); 

@@ -223,7 +223,7 @@ $(document).ready(function () {
         contratos.forEach(function (c, i) {
             var $col = '<tr>' +
                 '       <th scope="row" class="text-center" valign="middle">' +
-                '           <a href="https://iieg.gob.mx/seeddms-4.3.13/data/1048576/'+c.id+'/'+c.version+c.formato+'" target="_blank">' +
+                '           <a href="http://localhost:8002/seeddms/data/1048576/'+c.id+'/'+c.version+c.formato+'" target="_blank">' +
                 '           <img src="../src/images/pdf.png" class="pdf-icon"><br>' +
                 '           <span href="#" class="badge badge-primary">'+c.numeroContrato+'</span>' +
                 '           </a>' +
