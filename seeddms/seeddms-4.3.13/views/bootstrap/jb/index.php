@@ -33,25 +33,25 @@
 							<button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown"><i class="fa fa-calendar"></i> Fecha de sesión <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/100818.php" 	target="_blank">10 de Agosto de 2018</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/150318.php" 	target="_blank">15 de marzo de 2018</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/250118.php" 	target="_blank">25 de enero de 2018</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/071217.php" 	target="_blank">07 de diciembre de 2017</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/100817.php" 	target="_blank">10 de agosto de 2017</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/230317.php" 	target="_blank">23 de marzo de 2017</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/190117.php" 	target="_blank">19 de enero de 2017</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/081216.php" 	target="_blank">08 de diciembre de 2016</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/110816.php" 	target="_blank">11 de Agosto del 2016</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/280416.php" 	target="_blank">28 de Abril del 2016</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/260116.php" 	target="_blank">26 de Enero del 2016</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/101215.php" 	target="_blank">10 de Diciembre del 2015</a></li>								
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/130815.php" 	target="_blank">13 de Agosto del 2015</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/150515.php" 	target="_blank">15 de Mayo del 2015</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/230115.php" 	target="_blank">23 de Enero del 2015</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/061114.php" 	target="_blank">6 de Noviembre del 2014</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/140814.php" 	target="_blank">14 de Agosto del 2014</a></li>
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/020714.php" 	target="_blank">2 de Julio del 2014</a></li>	
-								<li><a href="http://iieg.gob.mx/seeddms-4.3.13/views/bootstrap/jb/110314.php" 	target="_blank">11 de Marzo del 2014</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/100818.php" 	target="_blank">10 de Agosto de 2018</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/150318.php" 	target="_blank">15 de marzo de 2018</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/250118.php" 	target="_blank">25 de enero de 2018</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/071217.php" 	target="_blank">07 de diciembre de 2017</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/100817.php" 	target="_blank">10 de agosto de 2017</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/230317.php" 	target="_blank">23 de marzo de 2017</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/190117.php" 	target="_blank">19 de enero de 2017</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/081216.php" 	target="_blank">08 de diciembre de 2016</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/110816.php" 	target="_blank">11 de Agosto del 2016</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/280416.php" 	target="_blank">28 de Abril del 2016</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/260116.php" 	target="_blank">26 de Enero del 2016</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/101215.php" 	target="_blank">10 de Diciembre del 2015</a></li>								
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/130815.php" 	target="_blank">13 de Agosto del 2015</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/150515.php" 	target="_blank">15 de Mayo del 2015</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/230115.php" 	target="_blank">23 de Enero del 2015</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/061114.php" 	target="_blank">6 de Noviembre del 2014</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/140814.php" 	target="_blank">14 de Agosto del 2014</a></li>
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/020714.php" 	target="_blank">2 de Julio del 2014</a></li>	
+								<li><a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/jb/110314.php" 	target="_blank">11 de Marzo del 2014</a></li>
 								
 							</ul>
 						</div>

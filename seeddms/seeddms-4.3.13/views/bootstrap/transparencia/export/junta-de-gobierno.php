@@ -76,7 +76,7 @@ $sheet->setCellValue('G1', 'Documentos aprobados');*/
 // Llenar el Excel
 $count = 2;
 foreach ($juntaGobierno['data'] as $c) {
-    $sheet->setCellValue('A'.$count, "http://iieg.gob.mx/seeddms-4.3.13/data/1048576/".$c->id."/1.pdf");
+    $sheet->setCellValue('A'.$count, "http://localhost:8002/seeddms/seeddms-4.3.13/data/1048576/".$c->id."/1.pdf");
     $sheet->setCellValue('B'.$count, $c->fecha);
     $sheet->setCellValue('C'.$count, html_entity_decode($c->tipoSesion));
     $sheet->setCellValue('D'.$count, $c->naturalezaSesion);
@@ -85,8 +85,8 @@ foreach ($juntaGobierno['data'] as $c) {
     /*foreach ($c->documentosConsulta as $dc) {
         if ($dc['orgFileName'] !== null) {
             $url = '';
-            if ($dc['name'] === 'Documentos aprobados') $url = "http://iieg.gob.mx/seeddms-4.3.13/data/1048576/$c->documento/f".$dc['id'].".".$dc['fileType'];
-            else $url = "http://iieg.gob.mx/seeddms-4.3.13/data/1048576/$c->documento/f".$dc['id'].".".$dc['fileType'];
+            if ($dc['name'] === 'Documentos aprobados') $url = "http://localhost:8002/seeddms/seeddms-4.3.13/data/1048576/$c->documento/f".$dc['id'].".".$dc['fileType'];
+            else $url = "http://localhost:8002/seeddms/seeddms-4.3.13/data/1048576/$c->documento/f".$dc['id'].".".$dc['fileType'];
 
             $sheet->setCellValue('E'.$count, '=Hyperlink("https://www.someurl.com/","Mi web")');
             $sheet->getCell('E'.$count)->setHyperlink(new PHPExcel_Cell_Hyperlink($url, 'LINK'));

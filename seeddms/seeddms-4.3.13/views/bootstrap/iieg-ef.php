@@ -51,9 +51,9 @@ $(function () {
 
 
 /*
-  $link = @mysql_connect("localhost", "iieggob_gdd","^~ozW]zTzuMD")
+  $link = @mysql_connect("localhost", "root","testIIEG2022")
       or die ("Error al conectar a la base de datos.");
-  @mysql_select_db("iieggob_soporte", $link)
+  @mysql_select_db("seedms_db", $link)
       or die ("Error al conectar a la base de datos.");
 
   $query = ("			SELECT
