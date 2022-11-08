@@ -23,7 +23,7 @@
        - stopWordsFile: path to stop word file for indexer
        - sortUsersInList: how to sort users in lists ('fullname' or '' (default))
     -->   
-    <edition strictFormCheck="false" viewOnlineFileTypes=".txt;.text;.html;.htm;.pdf;.gif;.png;.jpg;.jpeg" enableConverting="true" enableEmail="true" enableUsersView="true" enableFullSearch="true" enableFolderTree="true" expandFolderTree="1" enableLanguageSelector="true" stopWordsFile="" sortUsersInList="" enableRecursiveCount="false" maxRecursiveCount="0" enableClipboard="true" enableThemeSelector="true" sortFoldersDefault="n" enableDropUpload="true">
+    <edition strictFormCheck="false" viewOnlineFileTypes=".txt;.text;.html;.htm;.pdf;.gif;.png;.jpg;.jpeg" enableConverting="true" enableEmail="true" enableUsersView="true" enableFullSearch="true" enableFolderTree="true" expandFolderTree="1" enableLanguageSelector="false" stopWordsFile="" sortUsersInList="" enableRecursiveCount="false" maxRecursiveCount="0" enableClipboard="true" enableThemeSelector="false" sortFoldersDefault="n" enableDropUpload="true">
     </edition> 
     <!-- enableCalendar: enable/disable calendar
        - calendarDefaultView: calendar default view ("w" for week,"m" for month,"y" for year)
