@@ -207,7 +207,7 @@ $(document).ready(function () {
         documentos.forEach(function (c, i) {
             var $col = '<tr>' +
                 '       <td scope="row" class="text-center" valign="middle">' +
-                '           <a href="http://localhost:8002/seeddms/data/1048576/'+c.documento+'/1.pdf" target="_blank">' +
+                '           <a href="http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/1.pdf" target="_blank">' +
                 '           <img src="../src/images/pdf.png" class="pdf-icon"><br>' +
                 '           </a>' +
                 '           </td>' +
@@ -230,8 +230,8 @@ $(document).ready(function () {
             documentosConsulta.forEach(function (d) {
                 if (d.orgFileName !== null) {
                     var url = '';
-                    if (d.name === 'Documentos aprobados') url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
-                    else url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
+                    if (d.name === 'Documentos aprobados') url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
+                    else url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
 
                     $li = '<li><a target="_blank" href="'+url+'">'+d.orgFileName+'</a></li>';
                     $($li).appendTo('.docs-consulta-'+c.documento);
@@ -246,8 +246,8 @@ $(document).ready(function () {
             documentosAprobados.forEach(function (d) {
                 if (d.orgFileName !== null) {
                     var url = '';
-                    if (d.name === 'Documentos públicos para consulta previa') url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
-                    else url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
+                    if (d.name === 'Documentos públicos para consulta previa') url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
+                    else url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
 
                     $li = '<li><a target="_blank" href="'+url+'">'+d.orgFileName+'</a></li>';
                     $($li).appendTo('.docs-aprobados-'+c.documento);
@@ -262,8 +262,8 @@ $(document).ready(function () {
             actaSesion.forEach(function (d) {
                 if (d.orgFileName !== null && d.document == c.documento) {
                     var url = '';
-                    if (d.name === 'Acta de sesión') url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
-                    else url = 'http://localhost:8002/seeddms/data/1048576/'+c.documento+'/'+d.id+''+d.fileType;
+                    if (d.name === 'Acta de sesión') url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/f'+d.id+''+d.fileType;
+                    else url = 'http://'+self.location.host+'/seeddms/data/1048576/'+c.documento+'/'+d.id+''+d.fileType;
 
                     $li = '<li><a target="_blank" href="'+url+'">'+d.orgFileName+'</a></li>';
                     $($li).appendTo('.docs-acta-sesion-'+c.documento);

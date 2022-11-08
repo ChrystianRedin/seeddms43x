@@ -191,13 +191,29 @@ Se muestran los reportes para el sistema de transparencia
 
 <p>
 Los cinco temas que se muestran son:
-	<ul>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/contratos" target="_blank">Contratos</a> 
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/convenios" target="_blank">Convenios</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/junta-de-gobierno" target="_blank">Junta de Gobierno</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-resoluciones.php" target="_blank">Resoluciones del comité de transparencia</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-ef.php" target="_blank">Estados financieros</a> 
-	</ul>
+	
+	<div id="urlsReports"></div>
+	
+		<script>
+		$( document ).ready(function() {
+
+			const urls = document.getElementById('urlsReports');
+			const serverLocation = self.location.host
+
+			urls.innerHTML = `<ul>
+			
+			
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/contratos" target="_blank">Contratos</a> 
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/convenios" target="_blank">Convenios</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/transparencia/junta-de-gobierno" target="_blank">Junta de Gobierno</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-resoluciones.php" target="_blank">Resoluciones del comité de transparencia</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-ef.php" target="_blank">Estados financieros</a> 
+			</ul>`
+		});
+
+		
+
+		</script>
 </p>
 
 

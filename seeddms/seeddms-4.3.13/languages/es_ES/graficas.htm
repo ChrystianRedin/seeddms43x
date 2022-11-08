@@ -1,17 +1,31 @@
 <h1>Reportes de Transparencia</h1>
 
 <p>
-Se muestran los reportes de cada una de las secciones
+Se muestran los reportes de cada una de las secciones 2
 </p>
 
 <p>
-	<ul>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-contratos.html.php" target="_blank">Contratos</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-conenios.php" target="_blank">Convenios</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-jg.php" target="_blank">Junta de Gobierno</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-resoluciones.php" target="_blank">Resoluciones del comité de transparencia</a>
-		<li> <a href="http://localhost:8002/seeddms/seeddms-4.3.13/views/bootstrap/iieg-ef.php" target="_blank">Estados financieros</a> 
-	</ul>
+	<div id="urlsReports"></div>
+	
+		<script>
+		$( document ).ready(function() {
+
+			const urls = document.getElementById('urlsReports');
+			const serverLocation = self.location.host
+
+			urls.innerHTML = `<ul><li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-contratos.html.php" target="_blank">Contratos</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-conenios.php" target="_blank">Convenios</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-jg.php" target="_blank">Junta de Gobierno</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-resoluciones.php" target="_blank">Resoluciones del comité de transparencia</a>
+			<li> <a href="http://${serverLocation}/seeddms/seeddms-4.3.13/views/bootstrap/iieg-ef.php" target="_blank">Estados financieros</a> 
+			</ul>`
+		});
+
+		
+
+		</script>
+		
+	
 </p>
 
 

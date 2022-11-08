@@ -1,6 +1,8 @@
 <script>
 $(function () {
    // captura el evento keyup cuando escribes en el input
+	
+
     $("#search").keyup(function(){
         _this = this;
         // Muestra los tr que concuerdan con la busqueda, y oculta los demás.
@@ -17,7 +19,18 @@ $(function () {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.2.1/jquery.quicksearch.js"></script>
 
-<p align="center"><img src="http://localhost:8002/seeddms/seeddms-4.3.13/transparencia/img/logo_iieg.png"></p>
+<div id="urlImage"></div>
+
+<script>
+$( document ).ready(function() {
+
+	const urlimg = document.getElementById('urlImage');
+	urlimg.innerHTML = `<p align="center"><img src="http://${self.localtion.host}/seeddms/seeddms-4.3.13/transparencia/img/logo_iieg.png"></p>`;
+ 
+});
+</script>
+
+
 
 <p align="center"> <FONT FACE="arial" SIZE=5 COLOR=Gray><b><u>Resoluciones</u><br><br>Instituto de Informaci&oacute;n Estad&iacute;stica y Geogr&aacute;fica de Jalisco</FONT> </p>
 
